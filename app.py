@@ -1,6 +1,7 @@
 from groq import Groq
 from dotenv import load_dotenv
 import os
+import json
 
 # Carrega o .env
 load_dotenv()
@@ -11,6 +12,15 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 print("Chat iniciado! Digite 'sair' para encerrar.\n")
 
 memoria = []
+
+#Carrega o historico de mensagens 
+
+try:
+    with open("historico.json", "r") as f:
+     memoria = json.load(f)
+except:
+    memoria = []
+
 
 memoria.append({
     "role": "system",
@@ -36,5 +46,8 @@ while True:
     )
 
     memoria.append({"role": "assistant", "content": response.choices[0].message.content})
+
+    with open("historico.json", "w") as f:
+        json.dump(memoria, f)
 
     print(f"IA: {response.choices[0].message.content}\n")
