@@ -91,3 +91,7 @@ groq-chat/
 3. O histórico completo é enviado para a API da Groq (com o system prompt do Plim)
 4. A resposta é exibida no terminal e salva no `historico.json`
 5. Na próxima sessão, o histórico é carregado automaticamente — o Plim lembra de você!
+
+## EXEMPLO:
+![alt text](image-1.png)
+![alt text](image-2.png)
