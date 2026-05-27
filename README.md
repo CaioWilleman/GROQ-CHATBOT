@@ -93,5 +93,6 @@ groq-chat/
 5. Na próxima sessão, o histórico é carregado automaticamente — o Plim lembra de você!
 
 ## EXEMPLO:
-![Preview do Plim Chat](image-1.png)
-!(image-2.png)
+
+![Preview do Plim Chat](images/image-1.png)
+![Preview do Plim Chat](images/image-2.png)
